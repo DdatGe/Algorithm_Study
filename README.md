@@ -24,4 +24,4 @@ SWEA, 백준 알고리즘 5문제 풀이 -> 핵심 로직, 어려웠던 점 공�
 
 ✔️Notion
 
-https://www.notion.so/2-2fa96229f2d6805fb015e090d39240ad
+https://breezy-desert-a5c.notion.site/2-SSAFY-2fa96229f2d6805fb015e090d39240ad
