@@ -1,0 +1,37 @@
+import java.util.Scanner;
+ 
+public class Solution {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int T = sc.nextInt();
+        loop: for (int t = 1; t <= T; t++) {
+            ///////////////////////////////////////
+            int N = sc.nextInt();
+            boolean[] check = new boolean[N + 1];
+ 
+            int[] a = new int[N];
+             
+            for(int i = 0; i<N; i++)
+                a[i]=sc.nextInt();
+             
+            for (int i = 0; i < N; i++) {
+                // N보다 큰 수가 포함되면 No
+                if(a[i]>N) {
+                    System.out.print("#" + t + " No\n");
+                    continue loop;
+                }
+                // 수가 중복되어 쓰이면 No
+                 
+                if (check[a[i]]) {
+                    System.out.print("#" + t + " No\n");
+                    continue loop;
+                } else {
+                    check[a[i]] = true;
+                }
+            }
+            System.out.print("#" + t + " Yes\n");
+ 
+            ///////////////////////////////////////
+        }
+    }
+}
