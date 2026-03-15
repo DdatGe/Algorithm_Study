@@ -9,13 +9,13 @@ public class Main {
 		TreeMap<String, Double> tm = new TreeMap<>();
 		int cnt = 0;
 		String input = br.readLine();
-		while (input != null && !input.isEmpty()) { // input!= null을 해야 널포인트 에러가 안난다. 
+		while (input != null) { 
 			if (!tm.containsKey(input)) {
 				tm.put(input, (double) 1);
 				cnt++;
 			} else {
 				double tmp = tm.get(input);
-				tm.remove(input);
+				tm.remove(input);// put만써도 될 듯 remove과정 불필요
 				tm.put(input, tmp + 1);
 				cnt++;
 			}
@@ -25,9 +25,9 @@ public class Main {
 		for (String str : tm.keySet()) {
 			sb.append(str).append(" ").append(String.format("%.4f\n", (tm.get(str) / cnt * 100)));
 		}
-
+		
 		System.out.println(sb);
-
+		
 	}
 }
 
